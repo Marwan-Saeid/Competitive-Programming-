@@ -7,17 +7,17 @@ int main(){
   
   int value; cin>>value;
   int left=0,right=size-1;
-  while(left<right){
+  while(left<=right){
     int mid=(left+right)/2;
     if(item[mid]==value){
       cout<<"Found"<<endl;
       return 0;
     }
     if(item[mid]>value){
-      right=mid;
+      right=mid-1;
     }
     else{
-      left=mid;
+      left=mid+1;
     }
   }
   cout<<"Not Found"<<endl;
