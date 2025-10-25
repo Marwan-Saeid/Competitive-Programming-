@@ -1,0 +1,142 @@
+
+------------------------Start Session --------------------------
+
+Input vs operation 
+
+int n; o()
+
+cin>> n; o()
+
+if( n==10 )  o()
+
+for(int i=0;i<n;i++){    o()
+  o(1);
+}
+
+for(int i=0;i<n;i++){  o()  o()  ==>> o()
+for(int j=0;j<n;j++){
+ o(1);
+}
+}
+--------------------Examples -----------------------------------
+int calcSum(int a, int b){		//O()
+  int sum = a+b;
+  return sum;
+}
+
+double calcAverage(int a, int b){		//O()
+  double avg = (a+b)/2.0;
+  return avg;
+}
+
+bool isAlphabit(char x){		//O()
+  return (x>='A' && x<='Z' || x>='a' && x<='z');
+}
+
+
+
+double sumHarmonicSeries(int n){		//O()
+  double sum = 0;
+  for(int i = 1 ; i <= n ; ++i){
+    sum += (1.0/i);
+  }
+  return sum;
+}
+
+long long calcSumSegment(int a, int b){		//O()
+  long long sum = 0;
+  for(int i = a ; i<=b ; ++i)
+    sum += i;
+  return sum;
+}
+
+int stepper(int n){      //O()
+  int ret = 0, s = 8;
+  for(int i = 1 ; i <= n ; i += s){
+    ret += i;
+  }
+  return ret;
+}
+
+int stepper(int n, int s){      //O()
+  int ret = 0;
+  for(int i = 1 ; i <= n ; i += s){
+    ret += i;
+  }
+  return ret;
+}
+
+long long fact(int n){		//O()
+ 	 long long result=1;
+	for(int i=n;i>0;i--)
+	  result*=i;
+	return result;
+}
+
+long long power1(int base, int power){		//O()
+  long long result=1;
+	for(int i=0;i<power;i++)
+	    result*=base;
+	return result;
+}
+
+
+int calcLog(int n){		//O()
+  int ret = 0;
+    while(n > 1){
+    ++ret;
+    n /= 2;
+  }
+  return ret;
+}
+
+bool binarySearch(int val, int n){			//O()
+  int lo = 0, hi = n, mid;
+  while(hi-lo > 0){
+    mid = ((lo+hi)>>1);
+    if(A[mid] == val) return 1;
+    if(A[mid] < val)
+      lo = mid+1;
+    else
+      hi = mid-1;
+  }
+  return 0;
+}
+
+void printPowersOfTwoTill(int n){   //O()
+  for(int p = 1 ; p <= n ; p *= 2)
+    printf("%d\n", p);
+}
+
+for(int i = 0 ; i < (1<<n) ; ++i){		//O()
+  //some O(1) operations
+}
+
+for(int i = 0 ; i < (1<<n) ; ++i){		//O()
+  for(int i = 0 ; i < n ; ++i){
+    //some constant order statements go here
+  }
+}
+
+void searchArray(){		//O()
+  for(int i = 0 ; i < n ; ++i){
+    if(binarySearch(B[i]))
+      puts("Found");
+    else
+      puts("Not Found");
+  }
+}
+
+* Some useful Observations:
+  Big O                 Name                    Max n
+-------------------------------------------------------------------------------------------
+  O(1)        ---->     Constant      ---->     1e18      ---->     Math, Observation
+  O(Log(n))   ---->     Logarithmic   ---->     1e18      ---->     Binary Search (lower -upper- bound)
+  O(n)        ---->     Linear        ---->     1e8       ---->     one loop
+  O(n*Log(n)) ---->     LogLinear     ---->     4e5       ---->     Sorting, loop + binary search
+  O(n^2)      ---->     Quadratic     ---->     1e4       ---->     nested loop
+  O(2^n)      ---->     Exponential   ---->     25        ---->     Bitmasks, finding all possible answers
+  O(n!)       ---->     factorial     ---->     11        ---->     finding all permutations
+
+
+-------------------- End Session -------------------------
